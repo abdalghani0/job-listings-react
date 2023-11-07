@@ -1,0 +1,253 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+==============================
+	        Grid
+==============================
+*/
+ 
+*befor,
+ *after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+         -box-sizing: border-box;
+ }
+ 
+body {
+	display: block;
+	background: white;
+	font-family: 'Ubuntu', sans-serif;
+	line-height: 1.5;
+	font-size: 15px;
+}
+
+
+/* 
+==============================
+	      main styles
+==============================
+*/
+.container {
+    padding: 25px 1.5em 1em;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.job {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    padding: 1em;
+    margin: 30px auto;
+    width: 90%;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0px 2px 25px 21px rgba(230,247,247,0.6);
+    position: relative;
+}
+
+.logo {
+    margin-right: 1.2rem;
+}
+
+.job-info,
+.categories,
+.availability,
+.top,
+.filter-bar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+}
+
+.job-info {
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.filter-bar {
+    align-items: flex-start;
+    background-color: white;
+    max-width: 1000px;
+    width: 90%;
+    border-radius: 3px;
+    box-shadow: 0px 2px 25px 21px rgba(230,247,247,0.6);
+    padding: 1em;
+    margin: 30px auto;
+}
+
+.availability {
+    flex-wrap: nowrap;
+    gap: 25px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        padding: 30px;
+    }
+    .job-info {
+        flex-direction: column;
+    }
+    .job {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .categories {
+        border-top: 1px solid hsl(180, 8%, 52%);
+        padding-top: 10px;
+        margin-top: 20px;
+    }
+    .img {
+        width: 4rem;
+    }
+    .logo {
+        position: absolute;
+        top: -3rem;
+        left: 1rem;
+    }
+    .info-container {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+.featured-box {
+    font-size: 9px;
+    padding: 6px;
+    background: hsl(180, 14%, 20%);
+    color:   hsl(180, 31%, 95%);
+    border-radius: 12px;
+}
+
+.new-box {
+    font-size: 9px;
+    padding: 6px;
+    background: hsl(180, 29%, 50%);
+    color:   hsl(180, 31%, 95%);
+    border-radius: 12px;
+}
+
+.top h2 {
+    font-weight: 700;
+    font-size: 12px;
+    color: hsl(180, 29%, 50%);
+}
+
+.position {
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+    margin: 7px 0;
+}
+
+.availability li  {
+    list-style-type: disc;
+    color:  hsl(180, 8%, 52%);
+}
+
+
+/* 
+==============================
+	       buttons
+==============================
+*/
+
+.category {
+    padding: 0.8em;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: .1s ease;
+    margin: 0.5em;
+    margin-left: 0;
+    cursor: pointer;
+    background: hsl(180, 31%, 95%);
+    color:    hsl(180, 29%, 50%);
+}
+
+.keyword-wraper {
+    border-radius: 5px;
+    font-weight: 700;
+    transition: .1s ease;
+    margin: 0.5em;
+    margin-left: 0;
+    cursor: pointer;
+    background: hsl(180, 31%, 95%);
+    color:    hsl(180, 29%, 50%);
+}
+
+.filter-keyword {
+    padding: 0.8em;
+}
+
+.category:hover {
+    background:   hsl(180, 29%, 50%) ;
+    color:   hsl(180, 31%, 95%);
+}
+
+.remove-btn {
+    border: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 34px;
+    width: 34px;
+    background:   hsl(180, 29%, 50%) ;
+    color:   hsl(180, 31%, 95%);
+}
+
+.remove-btn:hover {
+    background: hsl(180, 14%, 20%);
+}
